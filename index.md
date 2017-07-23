@@ -1,26 +1,6 @@
 ---
-layout: post
-title: this is supposed to be the main page
+# You don't need to edit this file, it's empty on purpose.
+# Edit theme's home layout instead if you wanna make some changes
+# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+layout: home
 ---
-
-# Le pipi c'est du caca 
-* en
-	* liquide
-* et en
-	* jaune
-	
-*avec une odeur différente*
-
-# Le caca c'est du pipi
-* en
-	* marron
-* et en
-	* dur
-	
-*avec une odeur différente*
-
-*avec une odeur différente*
-
-*avec une odeur différente*
-
-# c'est tout pour moi bonsoir
