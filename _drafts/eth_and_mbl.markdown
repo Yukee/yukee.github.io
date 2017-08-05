@@ -26,26 +26,35 @@ There are two ways we can imagine a quantum system thermalizes.
 * Thermalization is ''given'' by an external *classical* bath to which our quantum system is coupled.
 Then any observable \\(\hat{O}(t)\\), after some time, thermalizes to the temperature of the bath, i.e.
 \\[
-	\lim_{t \to \infty} \hat{\rho}(t) = \hat{\rho}^\text{Boltzmann}(\beta).
+	\lim_{t \to \infty} \langle \hat{O} \rangle(t) = \sum_n |c_n|^2 O_{n,n}.
 \\]
+
 
 * The quantum system is isolated but somehow acts as its own bath and thermalizes by itself. This could happen is our system is very large: then for a (small) part of the system it can be as if the (huge) remaining part was an effective bath. 
 It is this latter case we are interested in.
 
-# The paradox of irreversibility and the eigenstate thermalization hypothesis
-In the second scenario (which we study in this post), the quantum system is isolated, so its density matrix simply evolves unitarily:
+# The paradox of irreversibility
+We consider from now on the second scenario.
+In this scenario, the expectation value of macroscopic observables thermalizes.
+The simplest explanation for this observation is that the density matrix itself thermalizes:
+\\[
+	\lim_{t \to \infty} \hat{\rho}(t) = \hat{\rho}^\text{Boltzmann}(\beta).
+\\]
+In this case, memory of the initial state is lost in the large time limit.
+However, since the quantum system is isolated, its density matrix evolves unitarily:
 \\[
 	\rho(t) = e^{-i H t} \rho(0) e^{i H t}.
 \\]
 This evolution is *reversible*: the memory of the initial state of the system is never lost.
-Therefore, is it impossible for the reduced density matrix to thermalize (i.e. to tend to a Boltzmann distribution).
-However, there are cases were an isolated quantum system thermalizes. This is the paradox of irreversibility.
+Therefore, is it impossible for the reduced density matrix to thermalize.
+This is the paradox of irreversibility.
 
 The paradox is only apparent. When we say that a quantum system thermalizes, we mean that its physical, macroscopic observables obey Boltzmann laws. 
-So, we do not need the density matrix to converge to Boltzmann, but to act on physical observables *as if* it had converged to Boltzmann:
+So, we do not need the density matrix to converge to Boltzmann, but to act on physical observables *as if* it had thermalized:
 \\[
-	\lim_{t \to \infty} \langle \hat{O} \rangle(t) = \text{tr}(\hat{\rho}^\text{Boltzmann}(\beta)\hat{O}).
+	\lim_{t \to \infty} \langle \hat{O} \rangle(t) = \text{tr}(\hat{\rho}^\text{Boltzmann}(\beta) \hat{O}).
 \\]
+This requirement constrains the eigenstates of the system, as we see now.
 
 ## The diagonal ensemble
 
@@ -57,16 +66,17 @@ For the thermalization to hold, the \\(c_n\\) coefficients of the eigendecomposi
 
 ## The microcanonical ensemble
 
-Since our system is close, and since we suppose it is thermal, we may expect the expectation value of macroscopic observables to be drawn from a microcanonical ensemble:
+Moreover, since our system is close, and since we suppose it is thermal, the expectation value of macroscopic observables are drawn from a microcanonical ensemble:
 \\[
-	\langle O \rangle(t \to \infty) = \langle O \rangle^\text{micro}
+	\langle O \rangle(t \to \infty) = \hat{\rho}^\text{Boltzmann}(\beta) = \langle O \rangle^\text{micro}.
 \\]
-with 
+Explicitly, we mean
 \\[
 	\langle O \rangle^\text{micro} = \frac{1}{\Omega([E,E+dE))} \sum_{n|E_n \in [E,E+dE)} O_{n,n}.
 \\]
 
-## The eigenstate thermalization hypothesis
+# The eigenstate thermalization hypothesis
+Can we reunite the microcanonical and diagonal ensembles in a single global picture? If the eigenstate thermalization hypothesis holds, the answer is yes!
 Under the eigenstate thermalization hypothesis, eigenstates themselves act as thermal states:
 \\[
 	O_{n,n} = \langle O \rangle^\text{micro}.
