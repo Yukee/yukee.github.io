@@ -62,27 +62,39 @@ If the system is initatially prepared in a pure state \\( \ket{\psi_0} = \sum_n 
 \\[
 	\lim_{t \to \infty} \langle \hat{O} \rangle(t) = \sum_n |c_n|^2 O_{n,n}.
 \\]
-For the thermalization to hold, the \\(c_n\\) coefficients of the eigendecomposition must act as random variable drawn from a Boltzmann distribution depending on an effective inverse temperature \\(\beta(\psi_0)\\).
+Since by asumption the system is thermal, the \\(c_n\\) coefficients of the eigendecomposition very
+\\[
+	\sum_n |c_n|^2 O_{n,n} = \text{tr}(\rho^\text{Boltzmann}(\beta)O).
+\\]
+It is as if the coefficients of the eigendecomposition were drawn from a statistical ensemble, which we shall call the *diagonal ensemble*.
 
 ## The microcanonical ensemble
 
-Moreover, since our system is close, and since we suppose it is thermal, the expectation value of macroscopic observables are drawn from a microcanonical ensemble:
+Moreover, since our system is closed, and since we suppose it is thermal, the expectation value of macroscopic observables are drawn from a microcanonical ensemble:
 \\[
-	\langle O \rangle(t \to \infty) = \hat{\rho}^\text{Boltzmann}(\beta) = \langle O \rangle^\text{micro}.
+	\langle O \rangle(t \to \infty) = \text{tr}(\rho^\text{Boltzmann}(\beta)O) = \langle O \rangle^\text{micro}(E),
 \\]
-Explicitly, we mean
+where $$E = \langle H \rangle$$ is the energy of the system at inverse temperature $$\beta$$.
+Explicitly, the microcanonical average writes
 \\[
-	\langle O \rangle^\text{micro} = \frac{1}{\Omega([E,E+dE))} \sum_{n|E_n \in [E,E+dE)} O_{n,n}.
+	\langle O \rangle^\text{micro}(E) = \frac{1}{\Omega([E,E+dE))} \sum_{n|E_n \in [E,E+dE)} O_{n,n}.
 \\]
 
 # The eigenstate thermalization hypothesis
 Can we reunite the microcanonical and diagonal ensembles in a single global picture? If the eigenstate thermalization hypothesis holds, the answer is yes!
-Under the eigenstate thermalization hypothesis, eigenstates themselves act as thermal states:
+Under the eigenstate thermalization hypothesis, *eigenstates themselves act as thermal states*.
+Let us prepare our system initially in the (eigen)state $$\ket{n}$$.
+Then, according to the hypothesis that this state is thermal,
 \\[
-	O_{n,n} = \langle O \rangle^\text{micro}.
+	O_{n,n} = \langle O \rangle^\text{micro}(E_n).
 \\]
+Reciprocally, assuming that $$O_{n,n}$$ verifies the above formula, we recover immediately that the system is thermal.
+Therefore, the ETH is equivalent to the above formula.
 
-
+It is easy to check that this formula is compatible with both the microcanonical and the diagonal ensembles, therefore uniting them.
+The ETH is a nice hypothesis, but does it hold?
+There is no thermal closed quantum system for which the ETH could not be validated.
+Thus, so far, the answer seems to be yes...
 <!---
 References
 --->
