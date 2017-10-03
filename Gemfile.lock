@@ -55,10 +55,9 @@ DEPENDENCIES
   jekyll-feed (~> 0.6)
   jekyll-theme-cayman (~> 0.0.4)
   minima (~> 2.0)
-  tzinfo-data
 
 RUBY VERSION
-   ruby 2.4.1p111
+   ruby 2.4.2p198
 
 BUNDLED WITH
    1.15.3

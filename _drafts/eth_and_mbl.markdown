@@ -83,18 +83,50 @@ Explicitly, the microcanonical average writes
 # The eigenstate thermalization hypothesis
 Can we reunite the microcanonical and diagonal ensembles in a single global picture? If the eigenstate thermalization hypothesis holds, the answer is yes!
 Under the eigenstate thermalization hypothesis, *eigenstates themselves act as thermal states*.
+
 Let us prepare our system initially in the (eigen)state $$\ket{n}$$.
-Then, according to the hypothesis that this state is thermal,
+Then, according to the ETH,
 \\[
 	O_{n,n} = \langle O \rangle^\text{micro}(E_n).
 \\]
+<!---
 Reciprocally, assuming that $$O_{n,n}$$ verifies the above formula, we recover immediately that the system is thermal.
 Therefore, the ETH is equivalent to the above formula.
+--->
 
 It is easy to check that this formula is compatible with both the microcanonical and the diagonal ensembles, therefore uniting them.
-The ETH is a nice hypothesis, but does it hold?
+The ETH is a nice hypothesis, but does it hold as soon as the quantum system is thermal?
 There is no thermal closed quantum system for which the ETH could not be validated.
 Thus, so far, the answer seems to be yes...
+
+## Temperature of a given eigenstate
+Let us consider a particle-hole symmetric system. Then if energy $$E$$ is in the spectrum, energy $$-E$$ is in the spectrum as well.
+Let $$-E_1 < -E_2 < \dots < E_2 < E_1$$ <!--- >>>>> ---> be the ordered set of energies of the system. 
+Because the system is thermal, we have
+\\[
+	\langle H \rangle = \frac{1}{Z(\beta)} \text{tr}(H e^{-\beta H}).
+\\]
+Using the particle-hole symmetry,
+\\[
+	\langle H \rangle = -\frac{\sum_{n} E_n \sinh(\beta E_n)}{\sum_n \cosh(\beta E_n)}.
+\\]
+From this equation, we can determine the temperature of any eigenstate. 
+For the groundstate, the equation becomes
+\\[
+	E_1 = \frac{\sum_{n} E_n \sinh(\beta E_n)}{\sum_n \cosh(\beta E_n)},
+\\]
+whose solution is $$\beta = \infty$$: *the groundstate has zero temperature*.
+Notice that if $$\beta_n$$ is the temperature of the eigenstate $$-E_n$$, then $$-\beta_n$$ is the temperature of its particle-hole symmetric partner $$E_n$$.
+In particular, *the state at $$E=0$$ (if it exists) has infinite temperature*.
+In between the two the temperature varies smoothly and monotonously.
+Therefore, as we increase the energy we explore regions of higher and higher temperature.
+
+# The many-body localized (MBL) phase
+
+There are however closed quantum systems for which the ETH does not hold: systems which are not thermal at all. 
+These we call many-body localized, or MBL systems.
+
+
 <!---
 References
 --->
