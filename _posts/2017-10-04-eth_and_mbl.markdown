@@ -26,7 +26,7 @@ There are two ways we can imagine a quantum system thermalizes.
 * Thermalization is ''given'' by an external *classical* bath to which our quantum system is coupled.
 Then any observable \\(\hat{O}(t)\\), after some time, thermalizes to the temperature of the bath, i.e.
 \\[
-	\lim_{t \to \infty} \langle \hat{O} \rangle(t) = \sum_n |c_n|^2 O_{n,n}.
+	\lim_{t \to \infty} \langle \hat{O} \rangle(t) = \text{tr}(\hat{\rho}^\text{Boltzmann}(\beta)\hat{O}).
 \\]
 
 
@@ -58,11 +58,11 @@ This requirement constrains the eigenstates of the system, as we see now.
 
 ## The diagonal ensemble
 
-If the system is initatially prepared in a pure state \\( \ket{\psi_0} = \sum_n c_n \ket{n} \\), then
+If the system is initatially prepared in a pure state \\( |\psi_0\rangle = \sum_n c_n |n\rangle \\), then
 \\[
 	\lim_{t \to \infty} \langle \hat{O} \rangle(t) = \sum_n |c_n|^2 O_{n,n}.
 \\]
-Since by asumption the system is thermal, the \\(c_n\\) coefficients of the eigendecomposition very
+Since by asumption the system is thermal, the \\(c_n\\) coefficients of the eigendecomposition verify
 \\[
 	\sum_n |c_n|^2 O_{n,n} = \text{tr}(\rho^\text{Boltzmann}(\beta)O).
 \\]
@@ -84,7 +84,7 @@ Explicitly, the microcanonical average writes
 Can we reunite the microcanonical and diagonal ensembles in a single global picture? If the eigenstate thermalization hypothesis holds, the answer is yes!
 Under the eigenstate thermalization hypothesis, *eigenstates themselves act as thermal states*.
 
-Let us prepare our system initially in the (eigen)state $$\ket{n}$$.
+Let us prepare our system initially in the (eigen)state $$|n\rangle$$.
 Then, according to the ETH,
 \\[
 	O_{n,n} = \langle O \rangle^\text{micro}(E_n).
@@ -100,6 +100,7 @@ There is no thermal closed quantum system for which the ETH could not be validat
 Thus, so far, the answer seems to be yes...
 
 ## Temperature of a given eigenstate
+In this part we examine a technical point: how to define the temperature of an eigenstate.
 Let us consider a particle-hole symmetric system. Then if energy $$E$$ is in the spectrum, energy $$-E$$ is in the spectrum as well.
 Let $$-E_1 < -E_2 < \dots < E_2 < E_1$$ <!--- >>>>> ---> be the ordered set of energies of the system. 
 Because the system is thermal, we have
