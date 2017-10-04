@@ -1,0 +1,28 @@
+---
+layout: post
+title:  "Many body localization"
+date:   2017-10-04 21:09:00 +0200
+categories: quantum physics, many-body
+---
+
+# The many definitions of the many body localized phase
+In the first post of this series, we have seen...
+There are however closed quantum systems for which the ETH does not hold: systems which are not thermal at all.
+These non-thermalizing systems are called many body localized (MBL).
+This fist definition of the MBL systems is not very practical.
+Here is a list of more practical definitions
+* LIOMs
+* Entropy
+* Level statisctics
+
+The paradox is only apparent. When we say that a quantum system thermalizes, we mean that its physical, macroscopic observables obey Boltzmann laws. 
+So, we do not need the density matrix to converge to Boltzmann, but to act on physical observables *as if* it had thermalized:
+\\[
+	\lim_{t \to \infty} \langle \hat{O} \rangle(t) = \text{tr}(\hat{\rho}^\text{Boltzmann}(\beta) \hat{O}).
+\\]
+
+
+<!---
+References
+--->
+[nandkishore_huse]: https://arxiv.org/abs/1404.0686
