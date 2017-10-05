@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "Entropy"
+date:   2017-10-05 19:35:00 +0200
+categories: quantum physics, many-body
+---
+

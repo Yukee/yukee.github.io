@@ -5,6 +5,10 @@ date:   2017-08-04 16:08:00 +0200
 categories: quantum physics, many-body
 ---
 
+This post is the first of a series on many body localization.
+The interest for many body localized systems sparked from this simple question: does an isolated system of $$N$$ interacting quatum particles alays behave as a -- classical -- thermodynamical system when $$N \to \infty$$?
+In this first post, we examine the case were the answer to this question is positive.
+
 # Two scenarios for thermalization of a quantum system
 In this part we follow [a review by Nandkishore and Huse][nandkishore_huse], and a review by Alet and Laflorencie (not online yet).
 We want to discuss possible ways a quantum system thermalizes. So, first, let us define what me mean by ''thermal''. We say that a quantum system is thermal if the expectation value of any physical observable is given by a Boltzmann law. 
@@ -121,11 +125,6 @@ Notice that if $$\beta_n$$ is the temperature of the eigenstate $$-E_n$$, then $
 In particular, *the state at $$E=0$$ (if it exists) has infinite temperature*.
 In between the two the temperature varies smoothly and monotonously.
 Therefore, as we increase the energy we explore regions of higher and higher temperature.
-
-# The many-body localized (MBL) phase
-
-There are however closed quantum systems for which the ETH does not hold: systems which are not thermal at all. 
-These we call many-body localized, or MBL systems.
 
 
 <!---
